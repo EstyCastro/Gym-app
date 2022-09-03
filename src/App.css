@@ -1,0 +1,76 @@
+.App {
+  margin-top: 100px;
+}
+body{
+  text-align: center;
+  
+  background-image: url(../imges/gym.png);
+  background-color: #282c34;
+  height: 600px;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: 55% 75%;
+  /* background-size: cover; */
+  position: relative;
+}
+label{
+  color: aliceblue;
+}
+h1{
+  color: aliceblue;
+}
+input{
+  border-radius:  5px;
+  margin: 5px;
+  width: 200px;
+  height: 20px;
+}
+select{
+  border-radius:  5px;
+  margin: 5px;
+  width: 90px;
+  height: 25px;
+}
+button{
+  border-radius:  5px;
+  width: 200px;
+  height: 40px;
+  margin: 5px;
+}
+.styleWorkout{
+  border: solid 1px black;
+  margin: 10px;
+  padding: 3px;
+  margin-left: 250px;
+  margin-right: 250px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
