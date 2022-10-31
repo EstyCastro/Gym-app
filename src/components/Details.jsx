@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Option from './Option';
 
 export default function Details(props) {
 
@@ -16,7 +17,8 @@ const [seniority,setSeniority] = useState(0)
 
     }
     const checkValidtion = ()=>{
-        //Saving data in the APP
+        //שמירת הנתונים בדף הראשי
+        //בדיקת ולידציה ומעבר לדף הבא
         props.addToTraining({workouts:workouts,seniority:seniority})
         props.changePage('question')
         
@@ -37,19 +39,7 @@ const [seniority,setSeniority] = useState(0)
      </select><br/><br/>
      <label for="seniority">How many years have you been traning? </label><br></br>
       <select id='seniority' onChange={savesSeniority}>
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
-        <option value="12">12</option>
-        <option value="13">13</option>
-        <option value="20">20</option>
-        <option value="21">21</option>
-        <option value="22">22</option>
-        <option value="23">23</option>
-        <option value="30">30</option>
+      <Option/>
      </select><br/><br/>
      <button onClick={checkValidtion}>Next</button>
     </div>
