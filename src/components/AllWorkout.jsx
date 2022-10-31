@@ -25,7 +25,6 @@ export default function AllWorkout(props) {
       onClick={startTraining}>
       Workout N.O :{props.element.no}<br></br> 
       {props.element.km} Km <br></br></button> }
-      {/* <h1>AllWorkout</h1> */}
     </div>
   )
 }
