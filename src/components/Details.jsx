@@ -16,8 +16,7 @@ const [seniority,setSeniority] = useState(0)
 
     }
     const checkValidtion = ()=>{
-        //שמירת הנתונים בדף הראשי
-        //בדיקת ולידציה ומעבר לדף הבא
+        //Saving data in the APP
         props.addToTraining({workouts:workouts,seniority:seniority})
         props.changePage('question')
         
