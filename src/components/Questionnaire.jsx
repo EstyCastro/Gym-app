@@ -4,14 +4,12 @@ import {Link,useNavigate} from 'react-router-dom';
 export default function Questionnaire(props) {
  const navigate = useNavigate();
  const saveDetails = ()=>{
-    //שמירת הנתונים 
-    //פתיחת הערוץ של המתאמן 
+    //Opening the trainee's channel
     navigate(`/showWorkout/${props.fullName}`);
-    //navigate(`/traning`);
  }
 
  const rolleback = ()=>{
-     //חזרה לדף הראשי ואיפוס הנתונים  
+     //Return to the main page and reset the data
      props.deletTraining()
      console.log('props.training',props.training)
      props.changePage('home')  
