@@ -29,30 +29,6 @@ export default function ShowWorkout(props) {
       console.log('after',props.training.trainingArr)
     }
   }
- /* useEffect(()=>{
-    let arr = props.training.trainingArr;
-    let counter = 0 ;
-
-    for(let i=0; i<arr.length; i++){
-      if(arr[i].don == 'no'){
-          counter++
-      }
-    }
-    if(counter==1){
-      setIsLastTraining(true)
-      console.log(isLastTraining)
-    }
-    //let arr=props.training.trainingArr
-    //arr.map((e)=>{e.don=='no'})
-   // if(arr.length>0){setIsLastTraining(true)}
-   }, [])*/
-
-  /* const checkIsLastTraining = ()=>{
-    if(!isLastTraining){
-      let arr=props.training.trainingArr.filter((e)=>{e.don=='no'})
-      if(arr.length>0){setIsLastTraining(true)}
-    } 
-   }*/
 
   const changePage = page => setCurrentPage(page)
 
@@ -70,28 +46,11 @@ export default function ShowWorkout(props) {
       case pages.workout:
         return <Workout changePage={changePage} training={props.training} trainingNumber={trainingNumber} trainingKm={trainingKm} saveCounter={saveCounter} counter={counter}/>
     }
-   }
-   
-  const startTraining =() => {
-    if(results== false){
-     // setResults(true)
-     // results=true
-    }
-    //setResults(true)
-  }
+   }   
 
   return (
     <div >
       {displayPage()}
-      {/* {!results ?
-      <button disabled={enabled} style={{background:background}} className='styleWorkout' value={props.element.no} 
-      onClick={startTraining()}>
-      Workout N.O :{props.element.no}<br></br> 
-      {props.element.km} Km <br></br></button>
-      : null}
-      <AllWorkout element={props.element}/>
-      { results ? <Workout/>: null }
-      {<Workout/>} */}
     </div>
     
   )
