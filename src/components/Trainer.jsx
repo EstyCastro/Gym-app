@@ -6,26 +6,11 @@ export default function Trainer(props) {
   const workouts = props.training.workouts
   const seniority = props.training.seniority
   const [results,setResults] = useState(true)
-  //const [trainingArr,setTrainingArr] = useState([])
-  //const trainingArr = []
-  //const [kilometer,setkilometer] =useState((seniority*5)/workouts)
   let kil = (seniority*5)/workouts
-
- /* const showWorkout = ()=>{
-    for(let i=0; i<workouts;i++){ // יצירת מערך של אימונים 
-        let item = {no:(i+1),km:kilometer}
-        setTrainingArr([item,...trainingArr])
-        setkilometer(kilometer*0.15)
-    }
-    setResults(false)
-    console.log(trainingArr)
-    /*trainingArr.map((e)=>{
-        <Workout element={e}/>
-    })*/ 
     
     function showWorkout  (){
         if(props.training.trainingArr.length == 0){
-            for(let i=0; i<workouts; i++){ // יצירת מערך של אימונים 
+            for(let i=0; i<workouts; i++){ // Creating array of trainings 
                 console.log(i)
                 //let item = {no:i,km:kil}
                 kil=Math.round(kil+kil*0.15) 
@@ -36,12 +21,7 @@ export default function Trainer(props) {
             }
         }  
         console.log(props.training.trainingArr)
-
-        /*props.training.trainingArr.map((e)=>{
-            console.log('e',e) 
-            return <Workout />
-        })*/
-        setResults(false) //למנוע ריצה אינסופית של הפונקציה
+        setResults(false) //prevent infinite running of the function
     }
 
     const StartTraining = ()=>{
@@ -73,7 +53,6 @@ export default function Trainer(props) {
       {props.training.trainingArr.map((e)=>{
             console.log('e',e) 
             return <AllWorkout element={e} changePage={props.changePage} saveTrainingNumber={props.saveTrainingNumber}/>
-            //return <AllWorkout />
         })} 
     </div>
   )
