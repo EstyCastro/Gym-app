@@ -4,26 +4,12 @@ import {Link,useNavigate} from 'react-router-dom';
 export default function Workout(props) {
   const navigate = useNavigate();
    
-  const saveSuccess = ()=>{
-    
+  const saveSuccess = ()=>{  
     props.training.trainingArr.map((item)=>{if(item.no == props.trainingNumber){
       item.don='yes'
        } })
     props.saveCounter()
-    
-
-   
-
-    props.changePage('trainer')
-    /*if(props.isLastTraining){
-      props.training.trainingArr.map((item)=>{
-        item.don='no'
-        })
-      props.changePage('trainer')
-    }else{
-    
-      props.changePage('trainer')
-    }   */                                                                      
+    props.changePage('trainer')                                                 
   }
 
   const saveFailure = ()=>{
