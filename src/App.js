@@ -21,15 +21,11 @@ function App() {
   const changePage = page => setCurrentPage(page)
   
   const saveTraining = (e)=>{
-    //useEffect(() => {
       setTraining(e)
-   // });
       console.log(training)
     }
   const addToTraining = (e)=>{
-    //useEffect(() => {
-      setTraining({id:training.id,fullName:training.fullName,gender:training.gender,workouts:e.workouts,seniority:e.seniority,trainingArr:[]})
-    // });
+     setTraining({id:training.id,fullName:training.fullName,gender:training.gender,workouts:e.workouts,seniority:e.seniority,trainingArr:[]})
      console.log(training)
     }
   const deletTraining=()=>{
