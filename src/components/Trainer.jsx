@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import AllWorkout from './AllWorkout'
-//import Workout from './Workout'
 
 export default function Trainer(props) {
   const workouts = props.training.workouts
@@ -12,12 +11,8 @@ export default function Trainer(props) {
         if(props.training.trainingArr.length == 0){
             for(let i=0; i<workouts; i++){ // Creating array of trainings 
                 console.log(i)
-                //let item = {no:i,km:kil}
                 kil=Math.round(kil+kil*0.15) 
-                //console.log(item)
-                props.training.trainingArr.push({no:i+1,km:kil,don:'no'})
-                //setTrainingArr([item,...trainingArr])
-                //setkilometer(kilometer*0.15+kilometer)  
+                props.training.trainingArr.push({no:i+1,km:kil,don:'no'})  
             }
         }  
         console.log(props.training.trainingArr)
@@ -36,7 +31,6 @@ export default function Trainer(props) {
 
         for(let i=0; i<arr.length; i++){
             if(arr[i].don == 'no'){
-                // return <Workout item={arr[i]}/>
                 props.saveTrainingNumber(arr[i].no,arr[i].km)
                 props.changePage('workout')
                 break;
